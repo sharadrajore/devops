@@ -15,6 +15,12 @@ pipeline {
                 bat "mvn test"
             }
             }
+            stage('Approve'){
+            	steps {
+            		input 'Have all test cases passed ?'
+            	}
+            	
+            }
             stage('Deploy') {
              steps {
                 echo 'Deploying '
