@@ -27,5 +27,7 @@ pipeline {
              deploy adapters: [tomcat8(credentialsId: 'tomcat-cred', path: '', url: 'http://localhost:9090/')], contextPath: null, onFailure: false, war: '**/*.war'
             }
             }
+            
+            
         }
 }
